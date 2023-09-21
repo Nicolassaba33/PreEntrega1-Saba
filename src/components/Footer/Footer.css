@@ -10,6 +10,7 @@
 p {
   text-decoration: underline;
   font-weight: 500;
+  padding-bottom: 1rem;
 }
 .contact {
   display: flex;
