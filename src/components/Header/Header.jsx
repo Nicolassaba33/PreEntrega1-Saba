@@ -1,13 +1,24 @@
 import "./Header.css";
-
-import img from "./logos_coderhouse.png";
-const Header = (props) => {
+import imgLogo from "../../assets/images/logo.jpg";
+import SvgIcon from "@mui/material/SvgIcon";
+import PersonIcon from "@mui/icons-material/Person";
+const Header = () => {
   return (
-    <div className="Header">
-      <img src={img} alt="" />
-      <h1>{props.title}</h1>
-      <h2>{props.subtitle}</h2>
-    </div>
+    <header>
+      <div className="hero">
+        <div className="container-logo">
+          <a href="index.html">
+            <img src={imgLogo} alt="Logo" />
+          </a>
+        </div>
+
+        <div className="container-user">
+          <a href="#">
+            <SvgIcon component={PersonIcon} className="iconUser" />
+          </a>
+        </div>
+      </div>
+    </header>
   );
 };
 

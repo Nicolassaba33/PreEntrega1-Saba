@@ -1,44 +1,42 @@
-import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
-import CardUser from "./components/CardUser/CardUser";
-import NavBar from "./components/NavBar/navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-// const ImgURL = "https://edicion.parentesis.com:8082/imagesPosts/coder00.jpg";
+import NavBar from "./components/NavBar/navbar";
+import Portada from "./components/Portada/Portada";
+import Footer from "./components/Footer/Footer";
+
+import imgProduct01 from "./assets/Images/Product01.png";
+import imgProduct02 from "./assets/Images/Product02.png";
+import imgProduct03 from "./assets/Images/Product03.png";
+import imgProduct04 from "./assets/Images/Product04.png";
+import imgProduct05 from "./assets/Images/Product05.png";
 
 const App = () => {
-  // [El NombreDeMiVariable / La funcion que me permite mutar esa variable]
-  // useState([EL_VALOR_INICIAL_DE_ELNOMBREDEMIVARIABLE])
-  const [number, setNumber] = useState(1212);
-
   return (
     <div>
-      <Header title="Mi primer titulo" subtitle="Soy un subtitulo" />
+      <Header />
       <NavBar />
-      <ItemListContainer />
+      <Portada />
       <div className="UserSection">
-        <CardUser
-          name="Nicolas Saba"
-          date="Se unio en Septiembre 2023"
-          description="Soy nuevo en React"
-          img="https://react.semantic-ui.com/images/avatar/large/elliot.jpg"
+        <ItemListContainer img={imgProduct01} name="Saco" price="$25.000" />
+        <ItemListContainer img={imgProduct02} name="Camisa" price="$18.000" />
+        <ItemListContainer
+          img={imgProduct03}
+          name="Buzo De Color"
+          price="$23.000"
         />
-        <CardUser
-          name="Raul Guitierrez"
-          date="Se unio en Agosto 2021"
-          description="Soy nuevo en Angular"
-          img="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+        <ItemListContainer
+          img={imgProduct04}
+          name="Pantalon Jean"
+          price="$21.000"
         />
-        <CardUser
-          name="Daniel Di Salvo"
-          date="Se unio en Septiembre 2019"
-          description="Senior en React"
-          img="https://react.semantic-ui.com/images/avatar/large/daniel.jpg"
+        <ItemListContainer
+          img={imgProduct05}
+          name="Pantalon Jean Celeste"
+          price="$20.000 "
         />
       </div>
-      <div className="CounterSection">
-        <p>{number}</p>
-      </div>
+      <Footer />
     </div>
   );
 };

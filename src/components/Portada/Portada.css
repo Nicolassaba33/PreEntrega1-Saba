@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 40rem;
+  background-image: linear-gradient(
+      rgba(186, 193, 204, 0.486),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../../assets/images/Banner.jpg);
+}
+
+.content-banner h2 {
+  font-family: "Great Vibes", cursive;
+  color: #fff;
+  padding-top: 20rem;
+  font-size: 4rem;
+}
